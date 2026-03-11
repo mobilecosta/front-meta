@@ -1,0 +1,351 @@
+/**
+ * Estilos globais com estética editorial sofisticada
+ * Fundo minimalista creme, tipografia de alto contraste
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lora:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Cores principais - Paleta editorial sofisticada */
+  --color-cream: #faf8f3;
+  --color-dark: #1a1a1a;
+  --color-gray-light: #e8e6e1;
+  --color-gray-medium: #c4c0b8;
+  --color-gray-dark: #6b6b6b;
+  --color-accent: #8b7355;
+  --color-accent-light: #d4c5b9;
+
+  /* Tipografia */
+  --font-serif-display: 'Playfair Display', serif;
+  --font-serif-body: 'Lora', serif;
+  --font-sans: 'Inter', sans-serif;
+
+  /* Espaçamento */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+
+  /* Sombras sutis */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  /* Bordas */
+  --border-radius-sm: 2px;
+  --border-radius-md: 4px;
+  --border-radius-lg: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-cream);
+  color: var(--color-dark);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Tipografia */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif-display);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin-bottom: var(--spacing-md);
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-dark);
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: var(--spacing-lg);
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+}
+
+p {
+  font-family: var(--font-serif-body);
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-gray-dark);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Linhas decorativas */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-gray-light),
+    transparent
+  );
+  margin: var(--spacing-xl) 0;
+}
+
+.divider-short {
+  width: 60px;
+  height: 2px;
+  background-color: var(--color-accent);
+  margin: var(--spacing-md) 0;
+}
+
+/* Componentes PO-UI customizados */
+po-page-default {
+  background-color: var(--color-cream);
+}
+
+po-container {
+  background-color: transparent;
+  padding: var(--spacing-lg);
+}
+
+po-button {
+  --button-color: var(--color-dark);
+  --button-background: transparent;
+  --button-border: 1px solid var(--color-gray-medium);
+}
+
+po-button[p-kind='primary'] {
+  --button-color: white;
+  --button-background: var(--color-accent);
+  --button-border: none;
+}
+
+po-input,
+po-email,
+po-phone,
+po-number,
+po-date,
+po-datetime,
+po-textarea,
+po-select {
+  --input-background: white;
+  --input-border: 1px solid var(--color-gray-light);
+  --input-border-radius: var(--border-radius-md);
+}
+
+po-table {
+  --table-border: 1px solid var(--color-gray-light);
+  --table-row-background: white;
+  --table-row-background-hover: var(--color-cream);
+}
+
+/* Layout e espaçamento */
+.page-container {
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
+  padding-bottom: var(--spacing-xl);
+  border-bottom: 1px solid var(--color-gray-light);
+}
+
+.header-title {
+  font-family: var(--font-serif-display);
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--color-dark);
+  letter-spacing: -1px;
+}
+
+.header-subtitle {
+  font-family: var(--font-serif-body);
+  font-size: 1.125rem;
+  color: var(--color-gray-dark);
+  font-weight: 400;
+  max-width: 600px;
+}
+
+/* Espaço negativo generoso */
+.section {
+  margin-bottom: var(--spacing-2xl);
+  padding: var(--spacing-xl);
+  background: white;
+  border: 1px solid var(--color-gray-light);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.section-title {
+  font-family: var(--font-serif-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--color-accent);
+}
+
+/* Equilíbrio assimétrico */
+.grid-asymmetric {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-2xl);
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .grid-asymmetric {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .page-container {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+}
+
+/* Botões com estilo editorial */
+button,
+po-button {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+button:hover,
+po-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Tabelas com estilo editorial */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-sans);
+}
+
+table thead {
+  background-color: var(--color-cream);
+  border-bottom: 2px solid var(--color-accent);
+}
+
+table th {
+  padding: var(--spacing-md);
+  text-align: left;
+  font-weight: 600;
+  color: var(--color-dark);
+  letter-spacing: 0.5px;
+}
+
+table td {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--color-gray-light);
+  color: var(--color-gray-dark);
+}
+
+table tbody tr:hover {
+  background-color: var(--color-cream);
+}
+
+/* Formulários */
+input,
+textarea,
+select {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-gray-light);
+  border-radius: var(--border-radius-md);
+  background-color: white;
+  color: var(--color-dark);
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.1);
+}
+
+/* Animações sutis */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Acessibilidade */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Impressão */
+@media print {
+  body {
+    background-color: white;
+  }
+
+  .no-print {
+    display: none;
+  }
+}
